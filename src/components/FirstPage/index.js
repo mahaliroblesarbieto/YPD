@@ -1,7 +1,7 @@
 import React  from 'react';
 import { InputText } from 'primereact/inputtext';
 import {Button} from 'primereact/button';
-const FirstPage = ({ name, saveName, weight, height, heightSitdown, arms }) => {
+const FirstPage = ({ name, saveName, weight, height, heightSitdown, arms, selectOption }) => {
     return (
         <>
             <p>INGRESO DE DATOS</p>
@@ -22,10 +22,10 @@ const FirstPage = ({ name, saveName, weight, height, heightSitdown, arms }) => {
                 <InputText id="in" value={arms} onChange={(e) => this.setState({ value: e.target.value })} />
                 <label htmlFor="in">Envergadura de brazos (cm)</label>
             </span>
-            <Button label="Longitudes/alturas"  />
-            <Button label="Diámetros"/>
-            <Button label="Perimetros" />
-            <Button label="Pliegues cutáneos" />
+            <Button label="Longitudes/alturas" onClick = {() => selectOption("length")} />
+            <Button label="Diámetros" onClick = {() => selectOption("diameters")}/>
+            <Button label="Perimetros" onClick = {() => selectOption("perimeters")}/>
+            <Button label="Pliegues cutáneos" onClick = {() => selectOption("skinFold")}/>
         </>
     );
 }

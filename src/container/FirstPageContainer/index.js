@@ -10,12 +10,17 @@ class FirstPageContainer extends Component {
         weight: '',
         height: '',
         heightSitdown: '',
-        arms: ''
+        arms: '',
+        option:'',
      }
 
     saveName = (e) => {
         this.setState({name: e.target.value})
         console.log(e.target.value); 
+    }
+
+    selectOption = (select) => {
+        this.setState({option: select})
     }
     render() { 
         return ( 
@@ -27,11 +32,12 @@ class FirstPageContainer extends Component {
             height= {this.state.height}
             heightSitdown={this.state.heightSitdown}
             arms = {this.state.arms}
+            selectOption= {this.selectOption}
             />
-            <OptionDiameters/>
-            <OptionLength/>
-            <OptionPerimeters/>
-            <OptionSkinFolds/>
+            {this.state.option === "diameters" ?  <OptionDiameters/> : ''}
+            {this.state.option === "length" ?  <OptionLength/> : ''}
+            {this.state.option === "perimeters" ?  <OptionPerimeters/> : ''}
+            {this.state.option === "skinFold" ?  <OptionSkinFolds/> : ''}
             </>
          );
     }

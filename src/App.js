@@ -1,13 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import LoginContainer from './container/LoginContainer';
+import FirstPageContainer from './container/FirstPageContainer';
+
 
 function App() {
   return (
-    <>
-    <LoginContainer/>
-    </>
+    <div className="App">
+      <FirstPageContainer />
+    </div>
   );
 }
 

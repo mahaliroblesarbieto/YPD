@@ -38,10 +38,12 @@ const FirstPage = ({ name,  weight, height, heightSitdown, arms, selectOption, h
           <label htmlFor="in">Envergadura de brazos (cm)</label>
         </span>
       </div>
-      <Button label="Longitudes/alturas" onClick={() => selectOption("length")} />
-      <Button label="Diámetros" onClick={() => selectOption("diameters")} />
-      <Button label="Perimetros" onClick={() => selectOption("perimeters")} />
-      <Button label="Pliegues cutáneos" onClick={() => selectOption("skinFold")} />
+      <div className="margin-bottom">
+      <Button  label="Longitudes/alturas" onClick={() => selectOption("length")} />
+      <Button  label="Diámetros" onClick={() => selectOption("diameters")} />
+      <Button  label="Perimetros" onClick={() => selectOption("perimeters")} />
+      <Button  label="Pliegues cutáneos" onClick={() => selectOption("skinFold")} />
+      </div>
     </>
   );
 }

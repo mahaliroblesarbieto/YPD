@@ -1,7 +1,7 @@
 import React from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
-import "../styles/login.css"
+import "../styles/login.css";
 import "primeflex/primeflex.css";
 import {
   Link,

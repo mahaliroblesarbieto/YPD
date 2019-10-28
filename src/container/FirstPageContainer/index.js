@@ -68,6 +68,8 @@ class FirstPageContainer extends Component {
     render() { 
         return ( 
             <>
+            <div class="p-grid">
+            <div class="p-col">
             <FirstPage 
             name={this.state.name}
             saveName = {this.saveName}
@@ -77,6 +79,10 @@ class FirstPageContainer extends Component {
             arms = {this.state.arms}
             selectOption= {this.selectOption}
             />
+            </div>
+            </div>
+            <div class="p-grid">
+            <div class="p-col">
             {this.state.option === "perimeters" ?  
             <OptionPerimeters 
             cabeza={this.state.cabeza} 
@@ -131,6 +137,8 @@ class FirstPageContainer extends Component {
             skinFold_7 = {this.state.skinFold_7}
             skinFold_8 = {this.state.skinFold_8}
             /> : ''}
+             </div>
+            </div>
             </>
          );
     }

@@ -11,7 +11,7 @@ const OptionDiameters = (diametro_1, diametro_2, diametro_3, diametro_4, diametr
     {/* <CodeHighlight className="language-jsx"> */}
     <div class="p-grid">
       <span className="p-float-label">
-        <InputText id="in" id="float-input" type="text" size="30" value={diametro_1} onChange={(e) => this.setState({ value: e.target.value })} />
+        <InputText id="in" value={diametro_1} onChange={(e) => this.setState({ diametro_1: e.target.value })} />
         <label htmlFor="in">Biacromial(cm)</label>
       </span>
     </div>

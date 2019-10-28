@@ -2,7 +2,6 @@ import React from 'react';
 import {InputText} from 'primereact/inputtext';
 const OptionLength = (longitud_1, longitud_2, longitud_3, longitud_4, longitud_5, longitud_6, longitud_7, longitud_8, longitud_9) => {
     return ( <>
-    <p>Longitudes/altura</p>
     <span className="p-float-label">
     <InputText id="in" value={longitud_1} onChange={(e) => this.setState({value: e.target.value})} />
     <label htmlFor="in">Acromio-radial(cm)</label>

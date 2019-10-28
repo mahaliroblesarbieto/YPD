@@ -4,6 +4,9 @@ import OptionDiameters from '../../components/OptionDiameters';
 import OptionLength from '../../components/OptionLength';
 import OptionPerimeters from '../../components/OptionPerimeters';
 import OptionSkinFolds from '../../components/OptionSkinFolds';
+import 'primereact/resources/themes/nova-light/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 class FirstPageContainer extends Component {
     state = { 
         name: '',
@@ -12,6 +15,19 @@ class FirstPageContainer extends Component {
         heightSitdown: '',
         arms: '',
         option:'',
+        cabeza:'',
+        cuello:'',
+        brazoRelajado:'',
+        brazoFlexionado:'',
+        antebrazoMax: '',
+        muñeca: '',
+        toraxMeso: '', 
+        cinturaMin: '',
+        caderaMax: '',
+        musloMax: '',
+        musloMed: '',
+        piernaMax:'',
+        tobillo: '',
         longitud_1:'',
         longitud_2:'',
         longitud_3:'',
@@ -30,6 +46,16 @@ class FirstPageContainer extends Component {
         diametro_7:'',
         diametro_8:'',
         diametro_9:'',
+        triceps: '',
+        skinFold_1:'',
+        skinFold_2:'',
+        skinFold_3:'',
+        skinFold_4:'',
+        skinFold_5:'',
+        skinFold_6:'',
+        skinFold_7:'',
+        skinFold_8:'',
+        
         
      }
 
@@ -53,7 +79,25 @@ class FirstPageContainer extends Component {
             arms = {this.state.arms}
             selectOption= {this.selectOption}
             />
-            {this.state.option === "diameters" ?  <OptionDiameters
+            {this.state.option === "perimeters" ?  
+            <OptionPerimeters 
+            cabeza={this.state.cabeza} 
+            cuello={this.state.cuello}
+            brazoRelajado={this.state.brazoRelajado}
+            brazoFlexionado={this.state.brazoFlexionado}
+            antebrazoMax={this.state.antebrazoMax}
+            muñeca={this.state.muñeca}
+            toraxMeso={this.state.toraxMeso}
+            cinturaMin={this.state.cinturaMin}
+            caderaMax={this.state.caderaMax}
+            musloMax={this.state.musloMax}
+            musloMed={this.state.musloMed}
+            piernaMax={this.state.piernaMax}
+            tobillo={this.state.tobillo}
+            /> 
+            : ''}
+            {this.state.option === "diameters" ?  
+            <OptionDiameters
             diametro_1 = {this.state.diametro_1}
             diametro_2 = {this.state.diametro_2}
             diametro_3 = {this.state.diametro_3}
@@ -65,7 +109,8 @@ class FirstPageContainer extends Component {
             diametro_9 = {this.state.diametro_9}
             />
              : ''}
-            {this.state.option === "length" ?  <OptionLength
+            {this.state.option === "length" ?  
+            <OptionLength
             longitud_1 = {this.state.longitud_1}
             longitud_2 = {this.state.longitud_2}
             longitud_3 = {this.state.longitud_3}
@@ -77,8 +122,17 @@ class FirstPageContainer extends Component {
             longitud_9 = {this.state.longitud_9}
             />
             : ''}
-            {this.state.option === "perimeters" ?  <OptionPerimeters/> : ''}
-            {this.state.option === "skinFold" ?  <OptionSkinFolds/> : ''}
+            {this.state.option === "skinFold" ?  
+            <OptionSkinFolds
+            skinFold_1 = {this.state.skinFold_1}
+            skinFold_2 = {this.state.skinFold_2}
+            skinFold_3 = {this.state.skinFold_3}
+            skinFold_4 = {this.state.skinFold_4}
+            skinFold_5 = {this.state.skinFold_5}
+            skinFold_6 = {this.state.skinFold_6}
+            skinFold_7 = {this.state.skinFold_7}
+            skinFold_8 = {this.state.skinFold_8}
+            /> : ''}
             </>
          );
     }

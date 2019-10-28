@@ -1,20 +1,73 @@
 import React from 'react';
-const OptionPerimeters = () => {
+import {InputText} from 'primereact/inputtext';
+const OptionPerimeters = ({
+    cabeza, 
+    cuello, 
+    brazoRelajado, 
+    brazoFlexionado, 
+    antebrazoMax, 
+    muñeca, 
+    toraxMeso, 
+    cinturaMin,
+    caderaMax,
+    musloMax,
+    musloMed,
+    piernaMax,
+    tobillo,
+}) => {
     return ( <>
-    <p>Perímetro</p>
-    <p>Cabeza(cm)</p>
-    <p>Cuello(cm)</p>
-    <p>Brazo relajado(cm)</p>
-    <p>Brazo flexionado(cm)</p>
-    <p>Antebrazo máximo(cm)</p>
-    <p>Muñeca(cm)</p>
-    <p>Torax mesoesternal(cm)</p>
-    <p>Cintura mínima(cm)</p>
-    <p>Cadera máxima(cm)</p>
-    <p>Muslo máximo(cm)</p>
-    <p>Muslo medial(cm)</p>
-    <p>Pierna máxima(cm)</p>
-    <p>Tobillo(cm)</p>
+    <span className="p-float-label">
+    <InputText id="in" value={cabeza} onChange={(e) => console.log(e)}/>
+    <label htmlFor="in">Cabeza(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={cuello} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Cuello(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={brazoRelajado} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Brazo relajado(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={brazoFlexionado} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Brazo flexionado(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={antebrazoMax} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Antebrazo máximo(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={muñeca} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Muñeca(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={toraxMeso} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Torax mesoesternal(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={cinturaMin} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Cintura mínima(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={caderaMax} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Cadera máxima(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={musloMax} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Muslo máximo(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={musloMed} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Muslo medial(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={piernaMax} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Pierna máxima(cm)</label>
+    </span>
+    <span className="p-float-label">
+    <InputText id="in" value={tobillo} onChange={(e) => this.setState({value: e.target.value})} />
+    <label htmlFor="in">Tobillo(cm)</label>
+    </span>
     </> );
 }
  

@@ -12,7 +12,11 @@ class LoginContainer extends Component {
     render() {
         return (
             <>
-               <Login/>
+               <Login
+               userName={this.state.userName}
+               password={this.state.password}
+               ocurraAlgo={this.ocurraAlgo}
+               />
             </>
         );
     }

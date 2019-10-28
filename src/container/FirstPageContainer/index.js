@@ -12,6 +12,19 @@ class FirstPageContainer extends Component {
         heightSitdown: '',
         arms: '',
         option:'',
+        cabeza:'',
+        cuello:'',
+        brazoRelajado:'',
+        brazoFlexionado:'',
+        antebrazoMax: '',
+        muñeca: '',
+        toraxMeso: '', 
+        cinturaMin: '',
+        caderaMax: '',
+        musloMax: '',
+        musloMed: '',
+        piernaMax:'',
+        tobillo: '',
      }
 
     saveName = (e) => {
@@ -36,7 +49,23 @@ class FirstPageContainer extends Component {
             />
             {this.state.option === "diameters" ?  <OptionDiameters/> : ''}
             {this.state.option === "length" ?  <OptionLength/> : ''}
-            {this.state.option === "perimeters" ?  <OptionPerimeters/> : ''}
+            {this.state.option === "perimeters" ?  
+            <OptionPerimeters 
+            cabeza={this.state.cabeza} 
+            cuello={this.state.cuello}
+            brazoRelajado={this.state.brazoRelajado}
+            brazoFlexionado={this.state.brazoFlexionado}
+            antebrazoMax={this.state.antebrazoMax}
+            muñeca={this.state.muñeca}
+            toraxMeso={this.state.toraxMeso}
+            cinturaMin={this.state.cinturaMin}
+            caderaMax={this.state.caderaMax}
+            musloMax={this.state.musloMax}
+            musloMed={this.state.musloMed}
+            piernaMax={this.state.piernaMax}
+            tobillo={this.state.tobillo}
+            /> 
+            : ''}
             {this.state.option === "skinFold" ?  <OptionSkinFolds/> : ''}
             </>
          );

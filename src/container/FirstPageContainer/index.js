@@ -4,9 +4,7 @@ import OptionDiameters from '../../components/OptionDiameters';
 import OptionLength from '../../components/OptionLength';
 import OptionPerimeters from '../../components/OptionPerimeters';
 import OptionSkinFolds from '../../components/OptionSkinFolds';
-import 'primereact/resources/themes/nova-light/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
+
 class FirstPageContainer extends Component {
     state = { 
         name: '',

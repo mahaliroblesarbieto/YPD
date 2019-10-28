@@ -5,12 +5,12 @@ const OptionSkinFolds = ({
 }) => {
   return (<>
     <span className="p-float-label">
-      <InputText id="in" value={skinFold_1} onChange={(e) => this.setState({ value: e.target.value })} />
-      <label htmlFor="in">Triceps(mm)</label>
+      <InputText id="a" value={skinFold_1} onChange={(e) => this.setState({ value: e.target.value })} />
+      <label htmlFor="a">Triceps(mm)</label>
     </span>
     <span className="p-float-label">
-      <InputText id="in" value={skinFold_2}  onChange={(e) => this.setState({ value: e.target.value })} />
-      <label htmlFor="in">Subescapular(mm)</label>
+      <InputText id="b" value={skinFold_2}  onChange={(e) => this.setState({ value: e.target.value })} />
+      <label htmlFor="b">Subescapular(mm)</label>
     </span>
     <span className="p-float-label">
       <InputText id="in" value={skinFold_3} onChange={(e) => this.setState({ value: e.target.value })} />

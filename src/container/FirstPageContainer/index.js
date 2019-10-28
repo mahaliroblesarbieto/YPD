@@ -52,14 +52,11 @@ class FirstPageContainer extends Component {
         skinFold_5:'',
         skinFold_6:'',
         skinFold_7:'',
-        skinFold_8:'',
-        
-        
+        skinFold_8:'',   
      }
 
-    saveName = (e) => {
-        this.setState({name: e.target.value})
-        console.log(e.target.value); 
+    handleChange = (e) => {
+        this.setState({[e.target.name]: e.target.value})
     }
 
     selectOption = (select) => {
@@ -78,6 +75,7 @@ class FirstPageContainer extends Component {
             heightSitdown={this.state.heightSitdown}
             arms = {this.state.arms}
             selectOption= {this.selectOption}
+            handleChange={this.handleChange}
             />
             </div>
             </div>
@@ -98,6 +96,7 @@ class FirstPageContainer extends Component {
             musloMed={this.state.musloMed}
             piernaMax={this.state.piernaMax}
             tobillo={this.state.tobillo}
+            handleChange={this.handleChange}
             /> 
             : ''}
             {this.state.option === "diameters" ?  
@@ -111,6 +110,7 @@ class FirstPageContainer extends Component {
             diametro_7 = {this.state.diametro_7}
             diametro_8 = {this.state.diametro_8}
             diametro_9 = {this.state.diametro_9}
+            handleChange={this.handleChange}
             />
              : ''}
             {this.state.option === "length" ?  
@@ -124,6 +124,7 @@ class FirstPageContainer extends Component {
             longitud_7 = {this.state.longitud_7}
             longitud_8 = {this.state.longitud_8}
             longitud_9 = {this.state.longitud_9}
+            handleChange={this.handleChange}
             />
             : ''}
             {this.state.option === "skinFold" ?  
@@ -136,6 +137,7 @@ class FirstPageContainer extends Component {
             skinFold_6 = {this.state.skinFold_6}
             skinFold_7 = {this.state.skinFold_7}
             skinFold_8 = {this.state.skinFold_8}
+            handleChange={this.handleChange}
             /> : ''}
              </div>
             </div>

@@ -7,7 +7,7 @@ import {
   Link,
 } from "react-router-dom";
 
-const Login = ({ userName, password, ocurraAlgo }) => {
+const Login = ({ userName, password, handleChange }) => {
   return (
     <>
       <div class="p-grid p-justify-center  margin-div">
@@ -15,18 +15,18 @@ const Login = ({ userName, password, ocurraAlgo }) => {
       </div>
       <div class="p-grid p-justify-center margin-div">
         <span className="p-float-label">
-          <InputText value={userName} onChange={(e) => this.setState({ userName: e.target.value })} />
+          <InputText value={userName} name="userName" onChange={(e) => handleChange(e)} />
           <label htmlFor="in">USUARIO</label>
         </span>
       </div>
       <div class="p-grid p-justify-center margin-div">
         <span className="p-float-label">
-          <InputText value={password} onChange={(e) => this.setState({ password: e.target.value })} />
+          <InputText value={password} name="password" onChange={(e) => handleChange(e)} />
           <label htmlFor="in">CONTRASEÑA</label>
         </span>
       </div>
       <div class="p-grid p-justify-center margin-div">
-      <Link to={"/FirstPage"}><Button label="INGRESAR" className="p-button-secondary" onClick={ocurraAlgo()} /></Link>
+      <Link to={"/FirstPage"}><Button label="INGRESAR" className="p-button-secondary" /></Link>
       </div>
     </>);
 }

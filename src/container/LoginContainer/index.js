@@ -7,7 +7,8 @@ class LoginContainer extends Component {
         password: '',
     }
 
-    ocurraAlgo = () => {
+    handleChange = (e) => {
+        this.setState({[e.target.name]: e.target.value})
     }
     render() {
         return (
@@ -15,7 +16,7 @@ class LoginContainer extends Component {
                <Login
                userName={this.state.userName}
                password={this.state.password}
-               ocurraAlgo={this.ocurraAlgo}
+               handleChange={this.handleChange}
                />
             </>
         );

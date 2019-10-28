@@ -2,6 +2,9 @@ import React from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import "primeflex/primeflex.css";
+import {
+  Link,
+} from "react-router-dom";
 
 const Login = ({ userName, password, ocurraAlgo }) => {
   return (
@@ -22,7 +25,7 @@ const Login = ({ userName, password, ocurraAlgo }) => {
         </span>
       </div>
       <div class="p-grid p-justify-center">
-        <Button label="INGRESAR" className="p-button-secondary" onClick={ocurraAlgo()} />
+      <Link to={"/FirstPage"}><Button label="INGRESAR" className="p-button-secondary" onClick={ocurraAlgo()} /></Link>
       </div>
     </>);
 }

@@ -4,6 +4,9 @@ import OptionDiameters from '../../components/OptionDiameters';
 import OptionLength from '../../components/OptionLength';
 import OptionPerimeters from '../../components/OptionPerimeters';
 import OptionSkinFolds from '../../components/OptionSkinFolds';
+import 'primereact/resources/themes/nova-light/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 class FirstPageContainer extends Component {
     state = { 
         name: '',
@@ -25,6 +28,26 @@ class FirstPageContainer extends Component {
         musloMed: '',
         piernaMax:'',
         tobillo: '',
+        longitud_1:'',
+        longitud_2:'',
+        longitud_3:'',
+        longitud_4:'',
+        longitud_5:'',
+        longitud_6:'',
+        longitud_7:'',
+        longitud_8:'',
+        longitud_9:'',
+        diametro_1:'',
+        diametro_2:'',
+        diametro_3:'',
+        diametro_4:'',
+        diametro_5:'',
+        diametro_6:'',
+        diametro_7:'',
+        diametro_8:'',
+        diametro_9:'',
+        triceps: ''
+        
      }
 
     saveName = (e) => {
@@ -47,8 +70,6 @@ class FirstPageContainer extends Component {
             arms = {this.state.arms}
             selectOption= {this.selectOption}
             />
-            {this.state.option === "diameters" ?  <OptionDiameters/> : ''}
-            {this.state.option === "length" ?  <OptionLength/> : ''}
             {this.state.option === "perimeters" ?  
             <OptionPerimeters 
             cabeza={this.state.cabeza} 
@@ -66,7 +87,36 @@ class FirstPageContainer extends Component {
             tobillo={this.state.tobillo}
             /> 
             : ''}
-            {this.state.option === "skinFold" ?  <OptionSkinFolds/> : ''}
+            {this.state.option === "diameters" ?  
+            <OptionDiameters
+            diametro_1 = {this.state.diametro_1}
+            diametro_2 = {this.state.diametro_2}
+            diametro_3 = {this.state.diametro_3}
+            diametro_4 = {this.state.diametro_4}
+            diametro_5 = {this.state.diametro_5}
+            diametro_6 = {this.state.diametro_6}
+            diametro_7 = {this.state.diametro_7}
+            diametro_8 = {this.state.diametro_8}
+            diametro_9 = {this.state.diametro_9}
+            />
+             : ''}
+            {this.state.option === "length" ?  
+            <OptionLength
+            longitud_1 = {this.state.longitud_1}
+            longitud_2 = {this.state.longitud_2}
+            longitud_3 = {this.state.longitud_3}
+            longitud_4 = {this.state.longitud_4}
+            longitud_5 = {this.state.longitud_5}
+            longitud_6 = {this.state.longitud_6}
+            longitud_7 = {this.state.longitud_7}
+            longitud_8 = {this.state.longitud_8}
+            longitud_9 = {this.state.longitud_9}
+            />
+            : ''}
+            {this.state.option === "skinFold" ?  
+            <OptionSkinFolds
+            triceps = {this.state.triceps}
+            /> : ''}
             </>
          );
     }

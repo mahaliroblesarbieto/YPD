@@ -10,7 +10,7 @@ import {
 const Login = ({ userName, password, ocurraAlgo }) => {
   return (
     <>
-      <div class="p-grid p-justify-center">
+      <div class="p-grid p-justify-center  margin-div">
         <h1>SISTEMA DE DATOS ANTROPOMETRICOS</h1>
       </div>
       <div class="p-grid p-justify-center margin-div">

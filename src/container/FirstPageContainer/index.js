@@ -46,7 +46,16 @@ class FirstPageContainer extends Component {
         diametro_7:'',
         diametro_8:'',
         diametro_9:'',
-        triceps: ''
+        triceps: '',
+        skinFold_1:'',
+        skinFold_2:'',
+        skinFold_3:'',
+        skinFold_4:'',
+        skinFold_5:'',
+        skinFold_6:'',
+        skinFold_7:'',
+        skinFold_8:'',
+        
         
      }
 
@@ -115,7 +124,14 @@ class FirstPageContainer extends Component {
             : ''}
             {this.state.option === "skinFold" ?  
             <OptionSkinFolds
-            triceps = {this.state.triceps}
+            skinFold_1 = {this.state.skinFold_1}
+            skinFold_2 = {this.state.skinFold_2}
+            skinFold_3 = {this.state.skinFold_3}
+            skinFold_4 = {this.state.skinFold_4}
+            skinFold_5 = {this.state.skinFold_5}
+            skinFold_6 = {this.state.skinFold_6}
+            skinFold_7 = {this.state.skinFold_7}
+            skinFold_8 = {this.state.skinFold_8}
             /> : ''}
             </>
          );
